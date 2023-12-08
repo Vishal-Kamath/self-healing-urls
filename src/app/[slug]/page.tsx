@@ -53,7 +53,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           </span>{" "}
           to{" "}
           <span className="bg-gray-300 px-1">
-            {post.title.slice(6) + "-" + post.id}
+            {post.title.replaceAll(" ", "-").slice(6) + "-" + post.id}
           </span>
         </p>
       </div>
